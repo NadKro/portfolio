@@ -2,7 +2,9 @@
   "name": "portfolio",
   "license": "UNLICENSED",
   "version": "1.0.0",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky install"
+  },
   "devDependencies": {
     "husky": "^8.0.1"
   }
