@@ -2,5 +2,8 @@
   "name": "portfolio",
   "license": "UNLICENSED",
   "version": "1.0.0",
-  "scripts": {}
+  "scripts": {},
+  "devDependencies": {
+    "husky": "^8.0.1"
+  }
 }
