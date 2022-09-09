@@ -2,6 +2,18 @@ const path = require('path');
 
 module.exports = {
   devtool: 'inline-source-map',
+  devServer: {
+    client: {
+      overlay: true,
+      progress: true,
+      reconnect: true
+    },
+    hot: true,
+    open: true,
+    static: {
+      directory: path.resolve(__dirname, './public')
+    },
+  },
   entry: './src/index.tsx',
   mode: 'none',
   module: {
