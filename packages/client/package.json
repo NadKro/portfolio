@@ -6,7 +6,10 @@
     "build": "webpack --config webpack.config.js",
     "dev": "webpack serve --port 3000 --config webpack.config.js",
     "lint": "eslint . --ext .ts,.tsx",
-    "lint:fix": "eslint . --fix --ext .ts,.tsx"
+    "lint:fix": "eslint . --fix --ext .ts,.tsx",
+    "test": "pnpm test:unit && pnpm test:e2e",
+    "test:e2e": "jest .e2e.ts --passWithNoTests",
+    "test:unit": "jest .test.ts --passWithNoTests"
   },
   "devDependencies": {
     "@types/jest": "^29.0.0",
