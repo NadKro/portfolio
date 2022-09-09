@@ -1,0 +1,5 @@
+{
+  "branches": ["main"],
+  "ci": false,
+  "plugins": ["@semantic-release/changelog", "@semantic-release/release-notes-generator"]
+}
