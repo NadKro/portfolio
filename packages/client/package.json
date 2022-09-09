@@ -2,7 +2,9 @@
   "name": "client",
   "license": "UNLICENSED",
   "version": "1.0.0",
-  "scripts": {},
+  "scripts": {
+    "build": "tsc"
+  },
   "devDependencies": {
     "@types/node": "^18.7.16",
     "typescript": "^4.8.2"
