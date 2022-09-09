@@ -3,7 +3,7 @@
   "license": "UNLICENSED",
   "version": "1.0.0",
   "scripts": {
-    "build": "tsc"
+    "build": "webpack --config webpack.config.js"
   },
   "devDependencies": {
     "@types/node": "^18.7.16",
