@@ -5,3 +5,13 @@ export interface StoryblokProfile {
     version: number
   }
 }
+
+export interface StoryblokStoriesResponse {
+  cv: number
+  stories: StoryblokStory[]
+}
+
+export interface StoryblokStory {
+  id: number
+  name: string
+}
