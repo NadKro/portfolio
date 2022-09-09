@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --config webpack.config.js",
+    "dev": "webpack serve --port 3000 --config webpack.config.js",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --fix --ext .ts,.tsx"
   },
