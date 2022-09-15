@@ -140,7 +140,7 @@ module.exports = {
     'react/no-is-mounted': 'error',
     'react/no-render-return-value': 'error',
     'react/no-string-refs': 'error',
-    'react/no-unknown-property': 'error',
+    'react/no-unknown-property': 'off',
     'react/prefer-es6-class': 'error',
     'react/prefer-exact-props': 'error',
     'react/prefer-read-only-props': 'error',
