@@ -1,5 +1,6 @@
 # Ignore everything in here
 *
 
-# Except the index.html
+# Except the index.html and static files
 !index.html
+!static/
