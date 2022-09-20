@@ -7,6 +7,7 @@ import { setSpaceVersion } from './storyblok.cache'
 import type {
   StoryblokProfile,
   StoryblokStory,
+  StoryblokStoryResponse,
 } from './storyblok.types'
 import type { StoryblokStoriesResponse } from './storyblok.types'
 
@@ -59,3 +60,13 @@ export async function fetchAllStories(): Promise<StoryblokStory<unknown>[] | Err
   }
   return response.stories
 }
+
+export async function fetchStoryById<T>(slug: string): Promise<StoryblokStory<T> | Error> {
+  const cacheKey = await getSpaceVersion(client)
+  const response = await sendCall<StoryblokStoryResponse<T>>(client, publicApiKey, cacheKey, `/v2/cdn/stories/${slug}`)
+  if (isError(response)) {
+    return response
+  }
+  return response.story
+}
+
