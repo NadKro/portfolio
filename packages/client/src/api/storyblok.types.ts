@@ -8,10 +8,16 @@ export interface StoryblokProfile {
 
 export interface StoryblokStoriesResponse {
   cv: number
-  stories: StoryblokStory[]
+  stories: StoryblokStory<unknown>[]
 }
 
-export interface StoryblokStory {
+export interface StoryblokStoryResponse<T> {
+  cv: number
+  story: StoryblokStory<T>
+}
+
+export interface StoryblokStory<T> {
   id: number
   name: string
+  content: T
 }
