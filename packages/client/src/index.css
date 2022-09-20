@@ -1,3 +1,21 @@
+@font-face {
+    font-family: 'Fira Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+    url('../public/static/fonts/fira-sans-v16-latin-regular.woff2') format('woff2'),
+    url('../public/static/fonts/fira-sans-v16-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+    url('../public/static/fonts/lexend-v17-latin-regular.woff2') format('woff2'),
+    url('../public/static/fonts/lexend-v17-latin-regular.woff') format('woff');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
