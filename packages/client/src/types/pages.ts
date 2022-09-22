@@ -1,5 +1,9 @@
-import type { Header } from './blocks'
+import type {
+  About,
+  Header,
+} from './blocks'
 
 export type HomePage = {
   header: Header[]
+  about: About
 }
