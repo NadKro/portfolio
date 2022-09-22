@@ -12,9 +12,11 @@ import { AnchorComponent } from './components/anchor'
 import { GalleryComponent } from './components/gallery'
 import { HeaderComponent } from './components/header'
 import { NavigationComponent } from './components/navigation'
+import { WorkComponent } from './components/work'
 import type {
   About,
   Header,
+  Work,
 } from './types/blocks'
 import type { HomePage } from './types/pages'
 import { isError } from './util/is-error-guard'
@@ -23,6 +25,7 @@ import { isError } from './util/is-error-guard'
 const Page = (): JSX.Element => {
   const [header, setHeader] = useState({} as Header)
   const [about, setAbout] = useState([] as About)
+  const [work, setWork] = useState([] as Work)
   const menuItems = [
     {
       title: 'About',
@@ -53,6 +56,7 @@ const Page = (): JSX.Element => {
       if (!isError(homePage)) {
         setHeader(homePage.content.header[0])
         setAbout(homePage.content.about)
+        setWork(homePage.content.work)
       }
     }
     void fetchData()
@@ -74,6 +78,21 @@ const Page = (): JSX.Element => {
           </span>
         </h3>
         <GalleryComponent items={about} />
+      </div>
+    </section>
+    <section id='work' class='px-4 lg:px-24 mt-20 text-slate-900 dark:text-slate-100'>
+      <div class='container'>
+        <h3
+          class='group mt-10 mb-10'
+        >
+          <a href='#work' role='heading' aria-level='3'
+            class='font-fira font-bold font text-lg underline underline-offset-8 decoration-4 decoration-cyan-900 dark:decoration-amber-300 text-slate-900 dark:text-white'
+          >Work</a>
+          <span class='ml-2 hidden group-hover:inline fill-cyan-900/50 dark:fill-amber-300/50'>
+            <AnchorComponent />
+          </span>
+        </h3>
+        <WorkComponent items={work}/>
       </div>
     </section>
   </div>
