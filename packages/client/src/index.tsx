@@ -6,12 +6,14 @@ import {
   useEffect,
   useState,
 } from 'preact/compat'
+import type { Richtext } from 'storyblok-js-client'
 
 import { fetchStoryById } from './api/storyblok.client'
 import { AnchorComponent } from './components/anchor'
 import { GalleryComponent } from './components/gallery'
 import { HeaderComponent } from './components/header'
 import { NavigationComponent } from './components/navigation'
+import { RichTextComponent } from './components/rich-text'
 import { WorkComponent } from './components/work'
 import type {
   About,
@@ -26,6 +28,7 @@ const Page = (): JSX.Element => {
   const [header, setHeader] = useState({} as Header)
   const [about, setAbout] = useState([] as About)
   const [work, setWork] = useState([] as Work)
+  const [imprint, setImprint] = useState({} as Richtext)
   const menuItems = [
     {
       title: 'About',
@@ -57,6 +60,7 @@ const Page = (): JSX.Element => {
         setHeader(homePage.content.header[0])
         setAbout(homePage.content.about)
         setWork(homePage.content.work)
+        setImprint(homePage.content.imprint)
       }
     }
     void fetchData()
@@ -93,6 +97,22 @@ const Page = (): JSX.Element => {
           </span>
         </h3>
         <WorkComponent items={work}/>
+      </div>
+    </section>
+    <section id='imprint' class='px-4 lg:px-24 mt-20 text-slate-900 dark:text-slate-100'>
+      <div class='container'>
+        <h3
+          class='group mt-10 mb-10'
+        >
+          <a href='#imprint' role='heading' aria-level='3'
+            class='font-fira font-bold mt-10 mb-10 font text-lg underline underline-offset-8 decoration-4 decoration-cyan-900 dark:decoration-amber-300 text-slate-900 dark:text-white'>Imprint</a>
+          <span class='ml-2 hidden group-hover:inline fill-cyan-900/50 dark:fill-amber-300/50'>
+            <AnchorComponent />
+          </span>
+        </h3>
+        <div class='pb-10 md:max-w-md'>
+          <RichTextComponent content={imprint} />
+        </div>
       </div>
     </section>
   </div>
