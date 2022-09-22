@@ -127,7 +127,7 @@ module.exports = {
     'promise/prefer-await-to-callbacks': 'error',
     'promise/prefer-await-to-then': 'error',
     'react/display-name': 'error',
-    'react/jsx-closing-bracket-location': 'error',
+    'react/jsx-closing-bracket-location': 'off',
     'react/jsx-no-comment-textnodes': 'error',
     'react/jsx-no-duplicate-props': 'error',
     'react/jsx-no-target-blank': 'error',
