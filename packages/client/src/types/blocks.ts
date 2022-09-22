@@ -18,3 +18,10 @@ export type Header = {
   social: SocialMediaLink[]
 }
 
+export type WorkSample = {
+  title: string
+  teaser: string
+  essence: ImageAsset
+}
+
+export type About = WorkSample[]
