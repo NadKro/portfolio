@@ -76,6 +76,7 @@ module.exports = {
     'import/no-default-export': 'error',
     'import-newlines/enforce': ['error', { items: 1 }],
     'indent': ['error', 2, { 'SwitchCase': 1 }],
+    'jsx-a11y/no-interactive-element-to-noninteractive-role': 'off',
     'jsx-quotes': ['error', 'prefer-single'],
     'key-spacing': ['error', { beforeColon: false, afterColon: true }],
     'keyword-spacing': 'off',
