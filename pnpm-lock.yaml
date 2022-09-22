@@ -42,6 +42,7 @@ importers:
       postcss-preset-env: ^7.8.1
       preact: ^10.10.6
       semantic-release: ^19.0.5
+      storyblok-js-client: ^4.5.7
       style-loader: ^3.3.1
       tailwindcss: ^3.1.8
       ts-jest: ^28.0.8
@@ -54,6 +55,7 @@ importers:
       axios: 0.27.2
       lru-cache: 7.14.0
       preact: 10.10.6
+      storyblok-js-client: 4.5.7_axios@0.27.2
     devDependencies:
       '@semantic-release/changelog': 6.0.1_semantic-release@19.0.5
       '@types/jest': 29.0.0
@@ -7102,6 +7104,14 @@ packages:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
     engines: {node: '>= 0.8'}
     dev: true
+
+  /storyblok-js-client/4.5.7_axios@0.27.2:
+    resolution: {integrity: sha512-4CmbB2yIxOdIi1L9CclfpiBaYBUn861X1xM0LozjFoqPyaHB/DSvkMEtywFGeCNdZL82vj98P/5LDxu/LxVgvg==}
+    peerDependencies:
+      axios: ^0.27.2
+    dependencies:
+      axios: 0.27.2
+    dev: false
 
   /stream-combiner2/1.1.1:
     resolution: {integrity: sha512-3PnJbYgS56AeWgtKF5jtJRT6uFJe56Z0Hc5Ngg/6sI6rIt8iiMBTa9cvdyFfpMQjaVHr8dusbNeFGIIonxOvKw==}

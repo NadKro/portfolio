@@ -50,6 +50,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "lru-cache": "^7.14.0",
-    "preact": "^10.10.6"
+    "preact": "^10.10.6",
+    "storyblok-js-client": "^4.5.7"
   }
 }
