@@ -13,11 +13,13 @@ import { AnchorComponent } from './components/anchor'
 import { GalleryComponent } from './components/gallery'
 import { HeaderComponent } from './components/header'
 import { NavigationComponent } from './components/navigation'
+import { ReferenceListComponent } from './components/reference-list'
 import { RichTextComponent } from './components/rich-text'
 import { WorkComponent } from './components/work'
 import type {
   About,
   Header,
+  References,
   Work,
 } from './types/blocks'
 import type { HomePage } from './types/pages'
@@ -28,6 +30,7 @@ const Page = (): JSX.Element => {
   const [header, setHeader] = useState({} as Header)
   const [about, setAbout] = useState([] as About)
   const [work, setWork] = useState([] as Work)
+  const [references, setReferences] = useState([] as References)
   const [imprint, setImprint] = useState({} as Richtext)
   const menuItems = [
     {
@@ -60,6 +63,7 @@ const Page = (): JSX.Element => {
         setHeader(homePage.content.header[0])
         setAbout(homePage.content.about)
         setWork(homePage.content.work)
+        setReferences(homePage.content.references)
         setImprint(homePage.content.imprint)
       }
     }
@@ -97,6 +101,21 @@ const Page = (): JSX.Element => {
           </span>
         </h3>
         <WorkComponent items={work}/>
+      </div>
+    </section>
+    <section id='references' class='px-4 lg:px-24 mt-20 text-slate-900 dark:text-slate-100'>
+      <div class='container'>
+        <h3
+          class='group mt-10 mb-10'
+        >
+          <a href='#references' role='heading' aria-level='3'
+            class='font-fira font-bold font text-lg underline underline-offset-8 decoration-4 decoration-cyan-900 dark:decoration-amber-300 text-slate-900 dark:text-white'
+          >References</a>
+          <span class='ml-2 hidden group-hover:inline fill-cyan-900/50 dark:fill-amber-300/50'>
+            <AnchorComponent />
+          </span>
+        </h3>
+        <ReferenceListComponent items={references} />
       </div>
     </section>
     <section id='imprint' class='px-4 lg:px-24 mt-20 text-slate-900 dark:text-slate-100'>
