@@ -27,3 +27,10 @@ export type WorkSample = {
 export type About = WorkSample[]
 
 export type Work = WorkSample[]
+
+export type Reference = {
+  title: string
+  logo: ImageAsset
+}
+
+export type References = Reference[]
