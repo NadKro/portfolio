@@ -25,3 +25,5 @@ export type WorkSample = {
 }
 
 export type About = WorkSample[]
+
+export type Work = WorkSample[]
