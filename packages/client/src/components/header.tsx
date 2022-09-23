@@ -17,7 +17,7 @@ export const HeaderComponent: FunctionalComponent<HeaderProperties> = (props: He
     {props.avatar
       && <div>
         <img className='inline-block h-16 w-16 rounded-full ring-1 ring-slate-100 float-left select-none' alt={props.avatar.alt}
-          title={props.avatar.title} src={`${props.avatar.filename}/m/80x80/smart`}
+          title={props.avatar.title} src={`${props.avatar.filename}/m/128x128/smart`}
         />
         <div className='ml-24'>
           <h1 className='pd-2 pb-2 text-4xl font-lexend font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-800 to-slate-900 dark:from-slate-100 dark:to-slate-300'>{props.teaser}</h1>
