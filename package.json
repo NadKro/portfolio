@@ -3,6 +3,7 @@
   "license": "UNLICENSED",
   "version": "1.0.0",
   "scripts": {
+    "build": "pnpm recursive run build",
     "prepare": "husky install"
   },
   "devDependencies": {
