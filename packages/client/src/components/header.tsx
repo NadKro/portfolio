@@ -13,7 +13,7 @@ export interface HeaderProperties {
 }
 
 export const HeaderComponent: FunctionalComponent<HeaderProperties> = (props: HeaderProperties) => {
-  return <div id='hero' className='px-4 md:max-w-4xl lg:px-24 mb-8'>
+  return <div id='hero' className='px-4 md:max-w-4xl lg:px-24 mb-8 min-h-[10rem]'>
     {props.avatar
       && <div>
         <img className='inline-block h-16 w-16 rounded-full ring-1 ring-slate-100 float-left select-none' alt={props.avatar.alt}
